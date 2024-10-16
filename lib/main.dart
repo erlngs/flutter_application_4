@@ -12,11 +12,11 @@ class Myapp extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       title: 'Login/Register Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
-      initialRoute: '/',
+      home: const LoginPage(),
       routes: {
-        '/': (context) => LoginPage(),
+        '/login': (context) => LoginPage(),
         '/Register' : (context) => RegisterPage(),
       },
     );
