@@ -85,7 +85,10 @@ class RegisterPage extends StatefulWidget {
                   },
             ),
             const SizedBox(height: 25),
-            ElevatedButton(
+            SizedBox(
+              width: double.infinity,
+              height: 45,
+            child: ElevatedButton(
               onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       
@@ -102,6 +105,7 @@ class RegisterPage extends StatefulWidget {
                   },
                   child: const Text("Daftar"),
                 ),
+            ),
             TextButton(
               onPressed: () {
                 Navigator.pop(context);

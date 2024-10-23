@@ -39,6 +39,13 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
+                  const Text(
+                  'Flutter Pemula',
+                  style: TextStyle(fontSize: 24),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 ElevatedButton(
                   onPressed: () {
 

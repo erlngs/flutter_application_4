@@ -13,6 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  bool _isObscure = true;
 
   @override
   Widget build(BuildContext context){
@@ -31,13 +32,14 @@ class _LoginPageState extends State<LoginPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(height: 50,),
-          const Icon(Icons.person, size: 100, color: Colors.blueAccent),
+          const Icon(Icons.person, size: 100),
           const SizedBox(height: 25),
           TextFormField(
             controller: _emailController,
             decoration: const InputDecoration(
-              labelText: 'Email',
-              border: OutlineInputBorder()),
+              labelText: 'Masukkan email',
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.email)),
             validator: MultiValidator([
               RequiredValidator(errorText: 'Masukkan alamat email yang valid'),
             ]).call,
@@ -46,13 +48,28 @@ class _LoginPageState extends State<LoginPage> {
           TextFormField(
             controller: _passwordController,
             decoration: InputDecoration(
-              labelText: 'Password',
-              border: OutlineInputBorder()),
-            obscureText: true,
+              labelText: 'Masukkan password',
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.lock),
+              suffixIcon: IconButton(
+                icon: Icon(
+                  _isObscure ? Icons.visibility : Icons.visibility_off,
+                ),
+                onPressed: (){
+                  setState(() {
+                    _isObscure = !_isObscure;
+                  });
+                },
+              ),
+            ),
+            obscureText: _isObscure,
             validator: RequiredValidator(errorText: 'Kata sandi di perlukan'),
           ),
-          SizedBox(height: 25),
-          ElevatedButton(
+          const SizedBox(height: 25),
+          SizedBox(
+            width: double.infinity,
+            height: 45,
+          child: ElevatedButton(
             onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       bool loginSuccess = false;
@@ -68,13 +85,11 @@ class _LoginPageState extends State<LoginPage> {
                       }
           
                       if (loginSuccess) {
-                        // Jika berhasil login, arahkan ke halaman homepage dengan fullname
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(builder: (context) => HomePage(fullname: fullname.toString())),
                         );
                       } else {
-                        // Jika login gagal, tampilkan pesan error
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Email atau Kata Sandi Salah')),
                         );
@@ -83,12 +98,14 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   child: const Text("Login"),
                 ),
-          const SizedBox(height: 25,),
+          ),
+          const SizedBox(
+            height: 25 ,),
           TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/Register');
             },
-             child: Text('Belum punya akun? Register'))
+             child: const Text('Belum punya akun? Register'))
         ],
       ),
       ),
