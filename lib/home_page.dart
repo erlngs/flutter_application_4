@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Homepage"),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: const Color.fromARGB(255, 16, 200, 225),
       ),
       body: Center(
         child: Padding(
@@ -18,10 +18,11 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
-                  Icons.person,
-                  size: 80,
-                ),
+                const SizedBox(height: 20,),
+          Image.asset('assets/welcome.jpg',
+           height: 300,
+           width: 500,),
+                
                 const SizedBox(
                   height: 20,
                 ),
@@ -40,7 +41,7 @@ class HomePage extends StatelessWidget {
                   height: 20,
                 ),
                   const Text(
-                  'Flutter Pemula',
+                  'as a Flutter Pemula',
                   style: TextStyle(fontSize: 24),
                 ),
                 const SizedBox(

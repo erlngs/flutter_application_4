@@ -19,8 +19,8 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
-        backgroundColor: Colors.greenAccent,
+        title: const Text('Selamat Datang'),
+        backgroundColor: const Color.fromARGB(255, 16, 200, 225),
       ),
       resizeToAvoidBottomInset: true,
       body: Padding(
@@ -32,7 +32,9 @@ class _LoginPageState extends State<LoginPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(height: 50,),
-          const Icon(Icons.person, size: 100),
+          Image.asset('assets/icon_no_bg.png',
+           height: 200,
+           width: 200,),
           const SizedBox(height: 25),
           TextFormField(
             controller: _emailController,

@@ -22,7 +22,7 @@ class RegisterPage extends StatefulWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Daftar'),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: const Color.fromARGB(255, 16, 200, 225),
       ),
       resizeToAvoidBottomInset: true,
       body: Padding(
@@ -33,7 +33,10 @@ class RegisterPage extends StatefulWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.person,size: 100,),
+            const SizedBox(height: 50,),
+          Image.asset('assets/icon_no_bg.png',
+           height: 160,
+           width: 160,),
             const SizedBox(height: 25,),
             
             TextFormField(
