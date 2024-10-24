@@ -35,6 +35,23 @@ class _LoginPageState extends State<LoginPage> {
           Image.asset('assets/icon_no_bg.png',
            height: 200,
            width: 200,),
+           Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Login',
+              style: TextStyle(fontSize: 24,
+              fontWeight: FontWeight.bold),
+            ),
+           ),
+            Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Login untuk melanjutkan',
+              style: TextStyle(fontSize: 15,
+              color: Colors.black.withOpacity(0.5),
+            ),
+           ),
+            ),
           const SizedBox(height: 25),
           TextFormField(
             controller: _emailController,
@@ -107,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
             onPressed: () {
               Navigator.pushNamed(context, '/Register');
             },
-             child: const Text('Belum punya akun? Register'))
+             child: const Text('Belum punya akun? Daftar'))
         ],
       ),
       ),

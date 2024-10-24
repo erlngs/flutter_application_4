@@ -1,16 +1,31 @@
-# flutter_application_4
+Nama    : Erlang Sinatrya Putra Yusya
 
-A new Flutter project.
+NIM     : 362358302083
 
-## Getting Started
+Kelas   : TRPL 2B
 
-This project is a starting point for a Flutter application.
+        Login
 
-A few resources to get you started if this is your first Flutter project:
+![alt text](image.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+        Daftar akun
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](image-1.png)
+
+        Setelah daftar akun lalu Login
+
+![alt text](image-2.png)
+
+        Berhasil Login
+
+![alt text](image-3.png)
+
+        Ketika ada yang salah memasukkan password, belum mengisi data, salah memasukkan data, password belum 8 digit
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-7.png)
+
+![alt text](image-6.png)

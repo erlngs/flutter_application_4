@@ -37,6 +37,23 @@ class RegisterPage extends StatefulWidget {
           Image.asset('assets/icon_no_bg.png',
            height: 160,
            width: 160,),
+           Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Daftar',
+              style: TextStyle(fontSize: 24,
+              fontWeight: FontWeight.bold),
+            ),
+           ),
+            Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Masukkan Informasi Pribadi anda',
+              style: TextStyle(fontSize: 15,
+              color: Colors.black.withOpacity(0.5),
+            ),
+           ),
+            ),
             const SizedBox(height: 25,),
             
             TextFormField(
